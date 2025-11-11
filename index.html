@@ -10,8 +10,8 @@
     html{scroll-behavior:smooth}
     header{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:white;padding:2em 0;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
     .header-content{display:flex;align-items:center;justify-content:center;gap:1.5em;flex-wrap:wrap}
-    .logo-circle{width:120px;height:120px;display:flex;align-items:center;justify-content:center}
-    .logo-circle img{width:100%;height:100%;object-fit:contain}
+    .logo-circle{width:100px;height:100px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 15px rgba(0,0,0,0.2)}
+    .logo-circle svg{width:70px;height:70px}
     .header-text h1{font-size:3em;margin-bottom:0.2em;text-shadow:2px 2px 4px rgba(0,0,0,0.3)}
     .header-text p{font-size:1.2em;font-weight:300}
     nav{background:#fff;padding:1em 0;box-shadow:0 2px 5px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100}
@@ -42,26 +42,35 @@
     .contact-item a{color:#2a5298;text-decoration:none;font-size:1.2em;transition:color 0.3s}
     .contact-item a:hover{color:#1e3c72;text-decoration:underline}
     .contact-form h3{color:#1e3c72;margin-bottom:1em;font-size:1.8em}
-    .contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:0.8em;margin-bottom:1em;border:2px solid #ddd;border-radius:5px;font-family:inherit;font-size:1em}
-    .contact-form button{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:white;padding:1em 2em;border:none;border-radius:5px;font-size:1.1em;cursor:pointer;width:100%}
+    .contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:0.8em;margin-bottom:1em;border:2px solid #ddd;border-radius:5px;font-family:inherit;font-size:1em;transition:border-color 0.3s}
+    .contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:none;border-color:#2a5298}
+    .contact-form button{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:white;padding:1em 2em;border:none;border-radius:5px;font-size:1.1em;cursor:pointer;transition:transform 0.3s;width:100%}
+    .contact-form button:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(42,82,152,0.3)}
     footer{background:#1e3c72;color:white;text-align:center;padding:2em 0;margin-top:3em}
+    footer p{margin-bottom:0.5em}
     footer a{color:white;text-decoration:none}
-    @media (max-width:768px){.header-text h1{font-size:2em}}
+    footer a:hover{text-decoration:underline}
+    @media (max-width:768px){.header-text h1{font-size:2em}nav a{margin:0 10px;font-size:0.9em}section h2{font-size:2em}.services-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header>
     <div class="header-content">
       <div class="logo-circle">
-        <!-- REMPLACE "https://i.imgur.com/oVdmPPe.png" par le lien imgur de ton logo -->
-        <img src="https://i.imgur.com/oVdmPPe.png" alt="Logo LOUHILL PROPRETE" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0iIzljY2M2NSIvPjwvc3ZnPg=='">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="#9CCC65"/>
+          <path d="M 50 25 C 45 35, 40 40, 40 50 C 40 58, 44 62, 50 62 C 56 62, 60 58, 60 50 C 60 40, 55 35, 50 25 Z" fill="white" stroke="#4A90A4" stroke-width="1.5"/>
+          <path d="M 52 40 Q 58 42, 62 48 Q 58 50, 52 48 Z" fill="#66BB6A"/>
+          <circle cx="38" cy="35" r="2" fill="white"/>
+        </svg>
       </div>
       <div class="header-text">
         <h1>LOUHILL PROPRETE</h1>
-        <p>L'expert propreté des environnements d'exception</p>
+        <p>Votre partenaire de confiance pour un nettoyage professionnel impeccable</p>
       </div>
     </div>
   </header>
+
   <nav>
     <ul>
       <li><a href="#accueil">Accueil</a></li>
@@ -70,73 +79,118 @@
       <li><a href="#devis">Devis gratuit</a></li>
     </ul>
   </nav>
+
   <section id="accueil" class="intro">
     <div class="container">
       <h2>Bienvenue chez LOUHILL PROPRETE</h2>
-      <p>Entreprise spécialisée dans le nettoyage professionnel de locaux commerciaux, industriels et de bureaux.</p>
+      <p>Entreprise spécialisée dans le nettoyage professionnel de locaux commerciaux, industriels et de bureaux. Nous offrons des prestations de qualité adaptées à vos besoins spécifiques avec un service irréprochable et des équipes qualifiées.</p>
     </div>
   </section>
+
   <section id="services">
     <div class="container">
       <h2>Nos Services</h2>
       <div class="services-grid">
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600" alt="Bureaux">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600" alt="Nettoyage de bureaux">
           <div class="service-content">
             <h3>Nettoyage de Bureaux</h3>
-            <p>Espaces de travail propres et sains.</p>
-            <ul><li>Sols et surfaces</li><li>Sanitaires</li><li>Espaces communs</li></ul>
+            <p>Des espaces de travail propres et sains pour vos employés.</p>
+            <ul>
+              <li>Nettoyage des sols et surfaces</li>
+              <li>Désinfection des sanitaires</li>
+              <li>Entretien des espaces communs</li>
+              <li>Vide corbeilles et recyclage</li>
+              <li>Intervention en journée ou hors horaires</li>
+            </ul>
           </div>
         </div>
+
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600" alt="Magasins">
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600" alt="Magasin d'optique">
           <div class="service-content">
-            <h3>Nettoyage de Magasins</h3>
-            <p>Image impeccable pour vos clients.</p>
-            <ul><li>Vitrines</li><li>Sols</li><li>Rayonnages</li></ul>
+            <h3>Nettoyage de Magasins et Commerces</h3>
+            <p>Maintenez une image impeccable pour vos clients.</p>
+            <ul>
+              <li>Nettoyage des vitrines et façades</li>
+              <li>Entretien des sols (carrelage, parquet)</li>
+              <li>Nettoyage des rayonnages et présentoirs</li>
+              <li>Désinfection des zones de passage</li>
+              <li>Intervention en dehors des horaires d'ouverture</li>
+            </ul>
           </div>
         </div>
+
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="Vitres">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="Lavage de vitres">
           <div class="service-content">
-            <h3>Lavage de Vitres</h3>
-            <p>Vitres éclatantes.</p>
-            <ul><li>Intérieur/extérieur</li><li>Anti-traces</li></ul>
+            <h3>Lavage de Vitres et Vitrines</h3>
+            <p>Des vitres éclatantes pour une meilleure luminosité.</p>
+            <ul>
+              <li>Nettoyage intérieur et extérieur</li>
+              <li>Traitement anti-traces</li>
+              <li>Nettoyage en hauteur sécurisé</li>
+              <li>Intervention régulière programmée</li>
+              <li>Matériel professionnel adapté</li>
+            </ul>
           </div>
         </div>
+
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=600" alt="Industriel">
+          <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=600" alt="Nettoyage industriel">
           <div class="service-content">
-            <h3>Nettoyage Industriel</h3>
-            <p>Environnements industriels.</p>
-            <ul><li>Ateliers</li><li>Machines</li></ul>
+            <h3>Nettoyage de Locaux Industriels</h3>
+            <p>Entretien adapté aux environnements industriels.</p>
+            <ul>
+              <li>Nettoyage d'ateliers et entrepôts</li>
+              <li>Dégraissage de machines et équipements</li>
+              <li>Évacuation des déchets industriels</li>
+              <li>Nettoyage de zones à risque</li>
+              <li>Respect des normes HACCP</li>
+            </ul>
           </div>
         </div>
+
         <div class="service-card">
           <img src="https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600" alt="Désinfection">
           <div class="service-content">
-            <h3>Désinfection</h3>
-            <p>Protocoles renforcés.</p>
-            <ul><li>Surfaces</li><li>COVID-19</li></ul>
+            <h3>Désinfection et Assainissement</h3>
+            <p>Protocoles de désinfection renforcés.</p>
+            <ul>
+              <li>Désinfection complète des surfaces</li>
+              <li>Traitement virucide et bactéricide</li>
+              <li>Assainissement de l'air</li>
+              <li>Protocole COVID-19</li>
+              <li>Produits certifiés et écologiques</li>
+            </ul>
           </div>
         </div>
+
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600" alt="Contrats">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600" alt="Contrats entretien">
           <div class="service-content">
-            <h3>Contrats Réguliers</h3>
-            <p>Sur mesure.</p>
-            <ul><li>Planning personnalisé</li><li>Tarifs dégressifs</li></ul>
+            <h3>Contrats d'Entretien Régulier</h3>
+            <p>Programmez vos interventions sur mesure.</p>
+            <ul>
+              <li>Interventions quotidiennes, hebdomadaires ou mensuelles</li>
+              <li>Planning personnalisé</li>
+              <li>Équipe dédiée à votre entreprise</li>
+              <li>Tarifs dégressifs selon fréquence</li>
+              <li>Suivi qualité régulier</li>
+            </ul>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contact</h2>
       <div class="contact-container">
         <div class="contact-info">
-          <h3>Coordonnées</h3>
+          <h3>Nos Coordonnées</h3>
           <div class="contact-item">
             <strong>📧 Email</strong>
             <a href="mailto:louhillproprete@gmail.com">louhillproprete@gmail.com</a>
@@ -147,24 +201,8 @@
           </div>
         </div>
         <div class="contact-form" id="devis">
-          <h3>Devis Gratuit</h3>
-          <form action="mailto:louhillproprete@gmail.com" method="post">
-            <input type="text" name="nom" placeholder="Nom" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="tel" name="tel" placeholder="Téléphone">
-            <select name="service"><option>Bureaux</option><option>Magasins</option><option>Vitres</option><option>Industriel</option></select>
-            <textarea name="message" rows="4" placeholder="Message"></textarea>
-            <button type="submit">Envoyer</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <p>&copy; 2025 LOUHILL PROPRETE</p>
-    <p>📧 <a href="mailto:louhillproprete@gmail.com">louhillproprete@gmail.com</a> | 📞 <a href="tel:0660149567">06 60 14 95 67</a></p>
-  </footer>
-</body>
-</html>
+          <h3>Demander un Devis Gratuit</h3>
+          <form action="mailto:louhillproprete@gmail.com" method="post" enctype
+
 
           
