@@ -165,50 +165,9 @@
       margin-bottom: 0.5em;
     }
     
-    /* Section À propos */
-    .about {
-      background: #f8f9fa;
-    }
-    
-    .about-content {
-      display: flex;
-      gap: 3em;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    
-    .about-text {
-      flex: 1;
-      min-width: 300px;
-    }
-    
-    .about-text p {
-      margin-bottom: 1em;
-      color: #555;
-      font-size: 1.1em;
-    }
-    
-    .about-values {
-      flex: 1;
-      min-width: 300px;
-    }
-    
-    .value-item {
-      background: white;
-      padding: 1.5em;
-      margin-bottom: 1em;
-      border-left: 4px solid #2a5298;
-      border-radius: 5px;
-    }
-    
-    .value-item h4 {
-      color: #1e3c72;
-      margin-bottom: 0.5em;
-    }
-    
     /* Contact */
     .contact {
-      background: white;
+      background: #f8f9fa;
     }
     
     .contact-container {
@@ -225,18 +184,40 @@
     .contact-info h3 {
       color: #1e3c72;
       margin-bottom: 1em;
+      font-size: 1.8em;
     }
     
     .contact-item {
-      display: flex;
-      align-items: center;
+      background: white;
+      padding: 1.5em;
       margin-bottom: 1.5em;
-      font-size: 1.1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     
     .contact-item strong {
       color: #1e3c72;
-      min-width: 120px;
+      display: block;
+      margin-bottom: 0.5em;
+      font-size: 1.1em;
+    }
+    
+    .contact-item a {
+      color: #2a5298;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+    
+    .contact-item a:hover {
+      color: #1e3c72;
+      text-decoration: underline;
+    }
+    
+    .contact-form h3 {
+      color: #1e3c72;
+      margin-bottom: 1em;
+      font-size: 1.8em;
     }
     
     .contact-form input,
@@ -320,7 +301,6 @@
     <ul>
       <li><a href="#accueil">Accueil</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#apropos">À propos</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#devis">Devis gratuit</a></li>
     </ul>
@@ -414,6 +394,13 @@
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1563213126-a4273aed2016?w=600" alt="Entretien régulier">
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600" alt="Entretien régulier">
           <div class="service-content">
-            <h3>Contrats d'Entretien Rég
+            <h3>Contrats d'Entretien Régulier</h3>
+            <p>Programmez vos interventions sur mesure avec des contrats adaptés à vos besoins et votre budget.</p>
+            <ul>
+              <li>Interventions quotidiennes, hebdomadaires ou mensuelles</li>
+              <li>Planning personnalisé</li>
+              <li>Équipe dédiée à votre entreprise</li>
+              <li>Tarifs dégressifs selon fréquence</li>
+              <li>Suivi
