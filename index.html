@@ -8,27 +8,22 @@
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333;}
     html {scroll-behavior: smooth;}
-    
     header {background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 2em 0; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
     .header-content {display: flex; align-items: center; justify-content: center; gap: 1.5em; flex-wrap: wrap;}
     .logo-circle {width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2);}
     .logo-circle svg {width: 70px; height: 70px;}
     .header-text h1 {font-size: 3em; margin-bottom: 0.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
     .header-text p {font-size: 1.2em; font-weight: 300;}
-    
     nav {background: #fff; padding: 1em 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;}
     nav ul {list-style: none; display: flex; justify-content: center; flex-wrap: wrap;}
     nav a {color: #1e3c72; text-decoration: none; margin: 0 20px; font-weight: 600; transition: color 0.3s; padding: 5px 10px;}
     nav a:hover {color: #2a5298; border-bottom: 2px solid #2a5298;}
-    
     .container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
     section {padding: 4em 0;}
     section h2 {color: #1e3c72; font-size: 2.5em; margin-bottom: 1em; text-align: center; position: relative; padding-bottom: 15px;}
     section h2:after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background: #2a5298;}
-    
     .intro {background: #f8f9fa; text-align: center;}
     .intro p {font-size: 1.2em; max-width: 800px; margin: 0 auto; color: #555;}
-    
     .services-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2em; margin-top: 2em;}
     .service-card {background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;}
     .service-card:hover {transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15);}
@@ -38,7 +33,6 @@
     .service-content p {color: #666; line-height: 1.8;}
     .service-content ul {margin-top: 1em; padding-left: 1.5em; color: #666;}
     .service-content ul li {margin-bottom: 0.5em;}
-    
     .contact {background: #f8f9fa;}
     .contact-container {display: flex; gap: 3em; flex-wrap: wrap;}
     .contact-info, .contact-form {flex: 1; min-width: 300px;}
@@ -52,12 +46,10 @@
     .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {outline: none; border-color: #2a5298;}
     .contact-form button {background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 1em 2em; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: transform 0.3s; width: 100%;}
     .contact-form button:hover {transform: translateY(-2px); box-shadow: 0 5px 15px rgba(42, 82, 152, 0.3);}
-    
     footer {background: #1e3c72; color: white; text-align: center; padding: 2em 0; margin-top: 3em;}
     footer p {margin-bottom: 0.5em;}
     footer a {color: white; text-decoration: none;}
     footer a:hover {text-decoration: underline;}
-    
     @media (max-width: 768px) {
       .header-text h1 {font-size: 2em;}
       nav a {margin: 0 10px; font-size: 0.9em;}
@@ -71,10 +63,10 @@
     <div class="header-content">
       <div class="logo-circle">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="45" fill="#9CCC65"/>
+          ircle cx="50" cy="50" r="45" fill="#9C9CCC65"/>
           <path d="M 50 25 C 45 35, 40 40, 40 50 C 40 58, 44 62, 50 62 C 56 62, 60 58, 60 50 C 60 40, 55 35, 50 25 Z" fill="white" stroke="#4A90A4" stroke-width="1.5"/>
           <path d="M 52 40 Q 58 42, 62 48 Q 58 50, 52 48 Z" fill="#66BB6A"/>
-          <circle cx="38" cy="35" r="2" fill="white"/>
+          ircle cx="38" cy="35" r="2" fill="="white"/>
         </svg>
       </div>
       <div class="header-text">
@@ -121,7 +113,7 @@
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600" alt="Magasin d'optique">
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600" alt="Magasin d'optique moderne">
           <div class="service-content">
             <h3>Nettoyage de Magasins et Commerces</h3>
             <p>Maintenez une image impeccable pour vos clients.</p>
@@ -201,14 +193,6 @@
 
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Contact</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3>Nos Coordonnées</h3>
-          <div class="contact-item">
-            <strong>📧 Email</strong>
-            <a href="mailto:louhillproprete@gmail.com">louhillproprete@gmail.com</a>
-          </div>
-          <div class="contact-item">
-            <strong>📞 Téléphone</strong>
-            <a href="tel:0660149567">06 60 14 95 67</a>
+      <h
+
+          
