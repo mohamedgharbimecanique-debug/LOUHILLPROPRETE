@@ -3,64 +3,417 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOUHILL PROPRETE - Nettoyage professionnel</title>
+  <title>LOUHILL PROPRETE - Entreprise de nettoyage professionnel</title>
   <style>
-    body {font-family: Arial, sans-serif; background: #f9f9f9; margin: 0;}
-    header {background: #2467a3; color: #fff; padding: 2em 0; text-align: center;}
-    nav {background: #fff; padding: 1em; text-align: center;}
-    nav a {color: #2467a3; text-decoration: none; margin: 0 20px; font-weight: bold;}
-    section {padding: 2em;}
-    h2 {color: #2467a3;}
-    .services ul {list-style: none; padding: 0;}
-    .services li {background: #e3f0fc; margin-bottom: 10px; padding: 8px; border-radius: 5px;}
-    footer {background: #2467a3; color: #fff; text-align: center; padding: 1em 0; margin-top: 3em;}
-    .contact-form {max-width: 400px; margin: auto;}
-    .contact-form input, .contact-form textarea {width: 100%; padding: 0.8em; margin-bottom: 1em; border: 1px solid #ccc;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      padding: 3em 0;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    header p {
+      font-size: 1.3em;
+      font-weight: 300;
+    }
+    
+    /* Navigation */
+    nav {
+      background: #fff;
+      padding: 1em 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      color: #1e3c72;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: color 0.3s;
+      padding: 5px 10px;
+    }
+    
+    nav a:hover {
+      color: #2a5298;
+      border-bottom: 2px solid #2a5298;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Section générale */
+    section {
+      padding: 4em 0;
+    }
+    
+    section h2 {
+      color: #1e3c72;
+      font-size: 2.5em;
+      margin-bottom: 1em;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    section h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: #2a5298;
+    }
+    
+    /* Section Intro */
+    .intro {
+      background: #f8f9fa;
+      text-align: center;
+    }
+    
+    .intro p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+    }
+    
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+    
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .service-content {
+      padding: 1.5em;
+    }
+    
+    .service-content h3 {
+      color: #1e3c72;
+      margin-bottom: 0.5em;
+      font-size: 1.5em;
+    }
+    
+    .service-content p {
+      color: #666;
+      line-height: 1.8;
+    }
+    
+    .service-content ul {
+      margin-top: 1em;
+      padding-left: 1.5em;
+      color: #666;
+    }
+    
+    .service-content ul li {
+      margin-bottom: 0.5em;
+    }
+    
+    /* Section À propos */
+    .about {
+      background: #f8f9fa;
+    }
+    
+    .about-content {
+      display: flex;
+      gap: 3em;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .about-text p {
+      margin-bottom: 1em;
+      color: #555;
+      font-size: 1.1em;
+    }
+    
+    .about-values {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .value-item {
+      background: white;
+      padding: 1.5em;
+      margin-bottom: 1em;
+      border-left: 4px solid #2a5298;
+      border-radius: 5px;
+    }
+    
+    .value-item h4 {
+      color: #1e3c72;
+      margin-bottom: 0.5em;
+    }
+    
+    /* Contact */
+    .contact {
+      background: white;
+    }
+    
+    .contact-container {
+      display: flex;
+      gap: 3em;
+      flex-wrap: wrap;
+    }
+    
+    .contact-info, .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .contact-info h3 {
+      color: #1e3c72;
+      margin-bottom: 1em;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5em;
+      font-size: 1.1em;
+    }
+    
+    .contact-item strong {
+      color: #1e3c72;
+      min-width: 120px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 0.8em;
+      margin-bottom: 1em;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1em;
+      transition: border-color 0.3s;
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      outline: none;
+      border-color: #2a5298;
+    }
+    
+    .contact-form button {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      padding: 1em 2em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: transform 0.3s;
+      width: 100%;
+    }
+    
+    .contact-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(42, 82, 152, 0.3);
+    }
+    
+    /* Footer */
+    footer {
+      background: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 2em 0;
+      margin-top: 3em;
+    }
+    
+    footer p {
+      margin-bottom: 0.5em;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+      }
+      
+      section h2 {
+        font-size: 2em;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>LOUHILL PROPRETE</h1>
-    <p>Votre société de nettoyage professionnel: magasins, bureaux, vitres, locaux industriels.</p>
+    <h1>🧹 LOUHILL PROPRETE</h1>
+    <p>Votre partenaire de confiance pour un nettoyage professionnel impeccable</p>
   </header>
+
   <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="#devis">Demander un devis</a>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#devis">Devis gratuit</a></li>
+    </ul>
   </nav>
 
-  <section id="services" class="services">
-    <h2>Nos Services</h2>
-    <ul>
-      <li>Nettoyage de magasins et commerces</li>
-      <li>Nettoyage d’espaces de bureaux et de locaux industriels</li>
-      <li>Lavage de vitres et vitrines</li>
-      <li>Entretien régulier ou ponctuel</li>
-      <li>Désinfection et gestion des déchets</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-form">
-      <form>
-        <input type="text" name="nom" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" rows="4" placeholder="Votre demande"></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+  <section id="accueil" class="intro">
+    <div class="container">
+      <h2>Bienvenue chez LOUHILL PROPRETE</h2>
+      <p>Entreprise spécialisée dans le nettoyage professionnel de locaux commerciaux, industriels et de bureaux. Nous offrons des prestations de qualité adaptées à vos besoins spécifiques avec un service irréprochable et des équipes qualifiées.</p>
     </div>
-    <p>Email : python69330@gmail.com<br>
-    Téléphone : 06 60 14 95 67</p>
   </section>
 
-  <section id="devis">
-    <h2>Demander un devis</h2>
-    <p>Contactez-nous pour un devis personnalisé selon vos locaux et vos besoins de nettoyage !</p>
-  </section>
+  <section id="services">
+    <div class="container">
+      <h2>Nos Services</h2>
+      <div class="services-grid">
+        
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600" alt="Nettoyage de bureaux">
+          <div class="service-content">
+            <h3>Nettoyage de Bureaux</h3>
+            <p>Des espaces de travail propres et sains pour vos employés. Nous intervenons selon votre planning pour ne pas perturber votre activité.</p>
+            <ul>
+              <li>Nettoyage des sols et surfaces</li>
+              <li>Désinfection des sanitaires</li>
+              <li>Entretien des espaces communs</li>
+              <li>Vide corbeilles et recyclage</li>
+              <li>Intervention en journée ou hors horaires</li>
+            </ul>
+          </div>
+        </div>
 
-  <footer>
-    &copy; 2025 LOUHILL PROPRETE. Tous droits réservés.
-  </footer>
-</body>
-</html>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=600" alt="Nettoyage de magasins">
+          <div class="service-content">
+            <h3>Nettoyage de Magasins et Commerces</h3>
+            <p>Maintenez une image impeccable pour accueillir vos clients dans un environnement propre et accueillant.</p>
+            <ul>
+              <li>Nettoyage des vitrines et façades</li>
+              <li>Entretien des sols (carrelage, parquet)</li>
+              <li>Nettoyage des rayonnages et présentoirs</li>
+              <li>Désinfection des zones de passage</li>
+              <li>Intervention en dehors des horaires d'ouverture</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600" alt="Lavage de vitres">
+          <div class="service-content">
+            <h3>Lavage de Vitres et Vitrines</h3>
+            <p>Des vitres éclatantes pour une meilleure luminosité et une image professionnelle de votre établissement.</p>
+            <ul>
+              <li>Nettoyage intérieur et extérieur</li>
+              <li>Traitement anti-traces</li>
+              <li>Nettoyage en hauteur sécurisé</li>
+              <li>Intervention régulière programmée</li>
+              <li>Matériel professionnel adapté</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1565802913240-c28c85f3de0f?w=600" alt="Nettoyage industriel">
+          <div class="service-content">
+            <h3>Nettoyage de Locaux Industriels</h3>
+            <p>Entretien adapté aux contraintes des environnements industriels avec respect des normes de sécurité.</p>
+            <ul>
+              <li>Nettoyage d'ateliers et entrepôts</li>
+              <li>Dégraissage de machines et équipements</li>
+              <li>Évacuation des déchets industriels</li>
+              <li>Nettoyage de zones à risque</li>
+              <li>Respect des normes HACCP si besoin</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=600" alt="Désinfection">
+          <div class="service-content">
+            <h3>Désinfection et Assainissement</h3>
+            <p>Protocoles de désinfection renforcés pour garantir la santé et la sécurité de vos locaux.</p>
+            <ul>
+              <li>Désinfection complète des surfaces</li>
+              <li>Traitement virucide et bactéricide</li>
+              <li>Assainissement de l'air</li>
+              <li>Protocole COVID-19</li>
+              <li>Produits certifiés et écologiques</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1563213126-a4273aed2016?w=600" alt="Entretien régulier">
+          <div class="service-content">
+            <h3>Contrats d'Entretien Rég
